@@ -21,20 +21,27 @@ class Empleados {
     }
 
     public function listarEmpleados() {
-        $sql = "SELECT * FROM empleados";
+        $sql = "SELECT idEmpleado, numeroIdentificacion, nombres, " 
+                ."apellidos, telefono, direccion, tipoCargo, nombreContratista, "
+                ."tipoDocumento, inicioSesion "
+                ."FROM empleados "
+                ."INNER JOIN cargos ON cargos_idcargos = idcargos "
+                ."INNER JOIN contratistas ON contratistas_idcontratistas = idcontratistas "
+                ."INNER JOIN tipodocumento ON tipoDocumento_idTipoDocumento = idTipoDocumento "
+                ."INNER JOIN usuarios ON usuarios_idUsuario = idUsuario;";
         return $this->conexion->consulta($sql);
     }
 
     public function insertarEmpleado() {
         $sql = "INSERT INTO empleados "
-                . "VALUE(NULL, "
+                . "VALUES(NULL, "
                 . "{$this->getIdentificacion()}"
                 . "{$this->getNombres()}"
                 . "{$this->getApellidos()}"
-                . "{$this->getCargo()}"
-                . "{$this->getContratista()}"
                 . "{$this->getTelefono()}"
                 . "{$this->getDireccion()}"
+                . "{$this->getCargo()}"
+                . "{$this->getContratista()}"
                 . "{$this->getIdCargo()}"
                 . "{$this->getIdContratista()}"
                 . "{$this->getIdTipoDocumento()}"
