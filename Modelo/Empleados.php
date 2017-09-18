@@ -51,14 +51,13 @@ class Empleados {
     }
 
     public function editarEmpleado() {
-        $sql = "UPDATE usuarios SET"
-                . "numeroIdentificacion={$this->getIdentificacion()}"
-                . "nombres={$this->getNombres()}"
-                . "apellidos={$this->getApellidos()}"
-                . "cargo={$this->getCargo()}"
-                . "contratista={$this->getContratista()}"
-                . "telefono={$this->getTelefono()}"
-                . "direccion={$this->getDireccion()}"
+        $sql = "UPDATE empleados SET"
+                . "idEmpleado={$this->getidEmpleado()}"
+                . "numeroIdentificacion={$this->getnumeroIdentificacion()}"
+                . "nombres={$this->getnombres()}"
+                . "apellidos={$this->getapellidos()}"
+                . "telefono={$this->gettelefono()}"
+                . "direccion={$this->getdireccion()}"
                 . "cargos_idcargos={$this->getIdCargo()}"
                 . "contratistas_idContratista={$this->getIdContratista()}"
                 . "tipoDocumento_idTipoDocumento={$this->getIdTipoDocumento()}"
