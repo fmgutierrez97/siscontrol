@@ -70,7 +70,7 @@ class Usuarios {
                 . "idUsuario, "
                 . "inicioSesion, "
                 . "contrasena, "
-                . "nombreRol, "
+                . "nombreRol "
                 . "FROM usuarios "
                 . "INNER JOIN roles ON roles_idRol = idRol "
                 . "WHERE inicioSesion = '{$this->getInicioSesion()}' "

@@ -17,7 +17,7 @@
                             <div class="page-header text-center" style="margin-top: 0px;">
                                 <img src="<?php echo URL_BASE; ?>Vista/img/find_user.png" alt="Usuario">
                             </div>
-                            <form role="form" action="<?php echo URL_BASE; ?>sesion/principal" method="POST">
+                            <form role="form" action="<?php echo URL_BASE; ?>session/principal" method="POST">
                                 <div class="form-group">
                                     <label for="">Usuario</label>
                                     <div class="input-group">
