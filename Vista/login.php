@@ -4,17 +4,18 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link rel="stylesheet" href="<?php echo URL_BASE; ?>Vista/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE; ?>Vista/css/font-awesome.css">
         <title>Inicia Sesión</title>
     </head>
-    <body background="img/background.jpg">
+    <body>
         <div class="container container-fluid">
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-4 col-md-5 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12" style="margin-top: 10px">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <div class="page-header" style="margin-top: 0px">
+                            <div class="page-header text-center" style="margin-top: 0px;">
+                                <img src="<?php echo URL_BASE; ?>Vista/img/find_user.png" alt="Usuario">
                             </div>
                             <form role="form" action="<?php echo URL_BASE; ?>sesion/principal" method="POST">
                                 <div class="form-group">
